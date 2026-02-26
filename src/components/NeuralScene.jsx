@@ -164,7 +164,7 @@ export default function NeuralScene() {
           <Vignette darkness={1.2} />
         </EffectComposer>
 
-        <OrbitControls enableZoom={false} enablePan={false} />
+        <OrbitControls enableZoom={false} enablePan={false} makeDefault />
       </Canvas>
       
       <div style={{
