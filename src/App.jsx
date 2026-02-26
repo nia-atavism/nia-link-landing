@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react'
 import NeuralScene from './components/NeuralScene'
 import logo from './assets/nia_link_logo.png'
 
-// 直接使用 IP 避開可能的 localhost 解析問題
-const API_BASE = "http://127.0.0.1:8001"
+// 優先讀取環境變數，若無則回退至本機開發位址
+const API_BASE = import.meta.env.VITE_API_URL || "http://127.0.0.1:8001"
 
 function App() {
   const [targetUrl, setTargetUrl] = useState('');
